@@ -13,13 +13,13 @@ connection.onclose = function(){
 };
 function sendR () {
   var r = document.getElementById('r').value;
-  connection.send("Led Rosso: " + r);
+  connection.send("Led Rosso: " + r + "\n\r");
 }
 function sendG () {
   var g = document.getElementById('g').value;
-  connection.send("Led Verde: " + g);
+  connection.send("Led Verde: " + g + "\n\r");
 }
 function sendB () {
   var b = document.getElementById('b').value;
-  connection.send("Led Blu: " + b);
+  connection.send("Led Blu: " + b + "\n\r");
 }
