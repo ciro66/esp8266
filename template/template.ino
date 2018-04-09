@@ -21,8 +21,8 @@ File fsUploadFile;                // a File variable to temporarily store the re
 const char* mdnsName = "esp8266"; // Domain name for the mDNS responder
 const char* mqttServer = "192.168.1.100";
 const int mqttPort = 1883;
-#const char* mqttUser = "*********";
-#const char* mqttPassword = "*********";
+// const char* mqttUser = "*********";
+// const char* mqttPassword = "*********";
 
 void setup() {
   Serial.begin(115200);
@@ -94,7 +94,7 @@ void startMQTT() {
 
   while (!client.connected()) {
     Serial.println("Connecting to MQTT...");
-    #if (client.connect("ESP8266Client", mqttUser, mqttPassword)) {
+    // if (client.connect("ESP8266Client", mqttUser, mqttPassword)) {
     if (client.connect("ESP8266Client")) {
       Serial.println("connected");
     } else {
